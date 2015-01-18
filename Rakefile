@@ -4,8 +4,6 @@ require 'rake/extensiontask'
 # Insert project local lib folder into library search path
 $: << File.join( File.dirname( __FILE__ ), 'lib' )
 
-require 'factory_elf'
-
 desc "Unit tests"
 RSpec::Core::RakeTask.new(:test) do |t|
   t.pattern = "spec/*_spec.rb"
@@ -21,6 +19,7 @@ end
 
 desc "Import CSV"
 task :import_csv do
+  require 'factory_elf'
   if FactoryElf.ready_to_run?
     puts "CSV data already imported."
   elsif FactoryElf.ready_to_import?
@@ -37,6 +36,7 @@ end
 
 desc "Run greedy scheduler and save submission"
 task :solve do
+  require 'factory_elf'
   unless FactoryElf.ready_to_run?
     raise "Not ready, import CSV data first."
   end
