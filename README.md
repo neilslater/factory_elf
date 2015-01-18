@@ -17,13 +17,17 @@ additional features which made very little difference to the end result.
 
  * Install dependencies:
 
+
     $ bundle install
+
 
  * Place a copy of ```toys_rev2.csv``` in the ```data``` folder.
 
  * Compile, import, test and run:
 
+
     $ bundle exec rake
+
 
 This should compile the C code, import the problem data from the CSV file (into Ruby's NArray
 format), run the unit tests, and then run the default solution. The process should take
@@ -33,8 +37,8 @@ around 30 minutes in total. The output is saved to ```data/submission.csv```.
 
 To use different parameter values, or try out ideas, you can use Ruby's ```irb``` tool:
 
-    $ irb -Ilib
 
+    $ irb -Ilib
     2.1.4 :001 > require 'factory_elf'
      => true
     2.1.4 :002 > s = FactoryElf::GreedyScheduler.new( :start_date => "2014-11-17" )
@@ -45,8 +49,7 @@ To use different parameter values, or try out ideas, you can use Ruby's ```irb``
     0.30%   -   2014-12-20 09:00  toy:6865108  elf:442  rate: 1.925/4.000  build:  595
     ...
 
-For a list of params, or to see what is going on at the top level, please read the source in
-```lib/factory_elf/greedy_scheduler.rb```.
+For a list of params, or to see what is going on at the top level, please read the source in ```lib/factory_elf/greedy_scheduler.rb```.
 
 To save the current solution as a Kaggle submission, after running the scheduler:
 
