@@ -1,7 +1,7 @@
 *.gem
 *.rbc
 .bundle
-lib/ru_ne_ne/ru_ne_ne.bundle
+lib/factory_elf/factory_elf.bundle
 .config
 .yardoc
 Gemfile.lock
@@ -16,3 +16,5 @@ spec/reports
 test/tmp
 test/version_tmp
 tmp
+data/*.csv
+data/*.dat
